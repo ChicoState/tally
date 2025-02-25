@@ -1,5 +1,7 @@
 # Tally
 
+[![Build C++](https://github.com/AidanLazovsky7/tally/actions/workflows/main.yml/badge.svg)](https://github.com/AidanLazovsky7/tally/actions/workflows/main.yml)
+
 This is a simple C++ command line application to keep a tally for each of multiple parties
 
 ## Getting Started
