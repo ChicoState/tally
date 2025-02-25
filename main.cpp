@@ -16,7 +16,13 @@ int main(int argc, char** argv)
     options = atoi(argv[1]); // convert character argument into integer
   }
   else ongoing = false;
-
+  
+  if (options > 9) {
+    std::cout << "usage: ./tally [<arg>]\n";
+    std::cout << "<arg> - number of parties to tally (1-9). Default = 1.\n";
+    exit(1);
+  }
+  
   tally.resize(options, 0); // start all tallies at 0
 
   while( ongoing ){
