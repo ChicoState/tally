@@ -10,8 +10,6 @@ int main(int argc, char** argv){
   unsigned int options = 0 ;
   vector <unsigned int> tally;
 
-
-
   if( argc == 1 ){
     options = 1;
   }
