@@ -10,6 +10,8 @@ int main(int argc, char** argv){
   unsigned int options = 0 ;
   vector <unsigned int> tally;
 
+
+
   if( argc == 1 ){
     options = 1;
   }
@@ -25,8 +27,13 @@ int main(int argc, char** argv){
   while( ongoing ){
     int id;
     cin >> input;
-
+      
     id = (int) input - '0';
+    if(id > 9 || id < 1)
+      {
+        cout <<  "error with input: " << input << " - number of parties to tally (1-9). Default = 1."<< endl;
+        return 0;
+      } 
     if( id >= 1 && id <= options ){
       tally[id-1]++;
     }
