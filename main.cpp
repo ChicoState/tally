@@ -3,6 +3,7 @@
 #include <cstdlib>
 
 using std::vector, std::cout, std::cin, std::endl;
+const short MIN = 1;
 
 int main(int argc, char** argv){
   char input = ' ';
@@ -11,7 +12,7 @@ int main(int argc, char** argv){
   vector <unsigned int> tally;
 
   if( argc == 1 ){
-    options = 1;
+    options = MIN;
   }
   else if( argc == 2 && atoi(argv[1])){ // argument is provided that can convert character -> integer
     options = atoi(argv[1]); // convert character argument into integer
@@ -20,6 +21,10 @@ int main(int argc, char** argv){
     ongoing = false;
   } 
 
+  if( options < MIN ){
+    return 1;
+  }
+  
   tally.resize(options, 0); // start all tallies at 0
 
   while( ongoing ){
@@ -34,7 +39,7 @@ int main(int argc, char** argv){
       ongoing = false;
     }
     else{
-      cout<<"Press number 1 - 9 to increase the tally for that ID, or press Q to quit\n";
+      cout<<"Press number "<<MIN<<" - 9 to increase the tally for that ID, or press Q to quit\n";
     } 
   }
   
