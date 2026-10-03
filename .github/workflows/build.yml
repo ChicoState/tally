@@ -2,11 +2,9 @@ name: Build
 
 on:
   push:
-    branches:
-      - [ main ]
+    branches: "main"
   pull_request:
-    branches:
-      - [ main ]
+    branches: "main"
   workflow_dispatch:
 
 permissions:
@@ -23,9 +21,3 @@ jobs:
 
       - name: Compile program
         run: g++ main.cpp --std=c++17 -o tally
-
-      - name: Upload program artifact
-        uses: actions/upload-artifact@v7
-        with:
-          name: tally
-          path: tally
