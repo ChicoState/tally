@@ -27,7 +27,7 @@ int main(int argc, char** argv){
   
   tally.resize(options, 0); // start all tallies at 0
 
-  cout << "Enter a number " << MIN << " to " << options << " to increase the tally for that ID.\n";
+  cout << "Enter a number "<< MIN<< " to "<< options<< " to increase the tally for that ID.\n";
   cout << "Press Q when done.\n";  
 
   while( ongoing ){
@@ -42,7 +42,7 @@ int main(int argc, char** argv){
       ongoing = false;
     }
     else{
-      cout<<"Press number "<<MIN<<" - " << options << " to increase the tally for that ID, or press Q to quit\n";
+      cout<<"Press number "<<MIN<<" - "<< options <<" to increase the tally for that ID, or press Q to quit\n";
     } 
   }
   
