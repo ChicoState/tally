@@ -29,6 +29,10 @@ int main(int argc, char** argv){
 
   while( ongoing ){
     int id;
+
+    // User Instructions provided here for better clarity for the user when
+    // program starts.
+    cout << "Enter a number between 1 and 2 to tally for the ID >> ";
     cin >> input;
 
     id = (int) input - '0';
